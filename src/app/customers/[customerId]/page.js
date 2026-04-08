@@ -18,6 +18,8 @@ export default function CustomerDetailsPage() {
   const [customer, setCustomer] = useState(null);
   const [invoices, setInvoices] = useState([]);
   const [error, setError] = useState('');
+  const [user, setUser] = useState(null);
+  const [isReady, setIsReady] = useState(false);
 
   const [editForm, setEditForm] = useState({
     name: '',
@@ -32,6 +34,18 @@ export default function CustomerDetailsPage() {
   });
 
   const [paymentForms, setPaymentForms] = useState({});
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      router.push('/login');
+      return;
+    }
+
+    const storedUser = localStorage.getItem('user');
+    setUser(storedUser ? JSON.parse(storedUser) : null);
+    setIsReady(true);
+  }, [router]);
 
   const fetchCustomerData = useCallback(async () => {
     if (!customerId) return;
@@ -208,10 +222,14 @@ export default function CustomerDetailsPage() {
   const formatCurrency = (value) =>
     `₹${(value || 0).toLocaleString('en-IN', { maximumFractionDigits: 2 })}`;
 
+  if (!isReady) {
+    return null;
+  }
+
   if (loading) {
     return (
       <>
-        <Header user={JSON.parse(localStorage.getItem('user') || '{}')} />
+        <Header user={user} />
         <div className={styles.container}>
           <div className={styles.loading}>Loading customer details...</div>
         </div>
@@ -222,7 +240,7 @@ export default function CustomerDetailsPage() {
   if (error) {
     return (
       <>
-        <Header user={JSON.parse(localStorage.getItem('user') || '{}')} />
+        <Header user={user} />
         <div className={styles.container}>
           <div className={styles.error}>{error}</div>
         </div>
@@ -236,7 +254,7 @@ export default function CustomerDetailsPage() {
 
   return (
     <>
-      <Header user={JSON.parse(localStorage.getItem('user') || '{}')} />
+      <Header user={user} />
       <div className={styles.container}>
         <div className={styles.topBar}>
           <h1>Customer Details</h1>

@@ -17,6 +17,8 @@
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{subcaption}
+\usepackage{enumitem}
+\usepackage{tikz}
 
 % Set double spacing
 \onehalfspacing
@@ -119,7 +121,7 @@ The jewellery retail industry faces persistent challenges with manual processes 
 
 This system provides an integrated, end-to-end solution that:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Automates Complex Billing}: Instantly calculates invoices with precise weight-based pricing, metal rate adjustments, GST compliance, and professional formatting
     \item \textbf{Manages Full Customer Lifecycle}: Complete customer database with purchase history, preferences, and communication tracking for personalized service
     \item \textbf{Controls Real-time Inventory}: Live stock tracking across product categories with automatic low-stock alerts and stock adjustment functionality
@@ -163,7 +165,7 @@ The internship encompassed a complete software development lifecycle from requir
 
 The Jewellery Shop Billing \& Management System is a modern, full-stack web application architected using the MERN stack (MongoDB, Express, React, Node.js) enhanced with Next.js 14 framework. The system provides a complete, end-to-end solution for jewellery shop management with multiple interconnected layers:
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Frontend Layer}: Interactive, responsive user interfaces built with React.js and Next.js 14, optimized for desktop and mobile devices with real-time calculations and instant feedback
     \item \textbf{Backend Layer}: Scalable RESTful API built with Express.js and Node.js, handling complex business logic including billing calculations, inventory management, and customer communications
     \item \textbf{Database Layer}: MongoDB NoSQL database providing flexible schema and powerful aggregation capabilities for storing invoices, customers, inventory, and transaction data
@@ -174,7 +176,7 @@ The Jewellery Shop Billing \& Management System is a modern, full-stack web appl
 \subsection{Key System Characteristics}
 
 \textbf{Technology and Architecture}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Built on MERN stack with Next.js 14 for modern, performant web application
     \item Serverless deployment on Vercel ensuring automatic scaling and 99.95\% uptime
     \item MongoDB Atlas cloud database with replica sets for high availability and automatic backups
@@ -183,7 +185,7 @@ The Jewellery Shop Billing \& Management System is a modern, full-stack web appl
 \end{enumerate}
 
 \textbf{Functional Capabilities}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Complete invoice lifecycle from creation to payment tracking and archiving
     \item Real-time calculation engine processing complex metal weight, purity, and labor charge calculations instantly
     \item GST-compliant invoicing automatically calculating and segregating taxes per Indian law
@@ -193,7 +195,7 @@ The Jewellery Shop Billing \& Management System is a modern, full-stack web appl
 \end{enumerate}
 
 \textbf{Quality Attributes}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item High Performance: Sub-second response times for calculations, 40-50ms latency globally through CDN
     \item Scalability: Auto-scaling architecture supporting 500+ concurrent users without degradation
     \item Reliability: 99.95\% uptime SLA with automatic failover and backup systems
@@ -206,51 +208,51 @@ The Jewellery Shop Billing \& Management System is a modern, full-stack web appl
 The Jewellery Billing System provides comprehensive business automation capabilities tailored for jewellery retail and wholesale operations:
 
 \subsection{Invoice and Billing Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Automated Invoice Generation}: Create invoices rapidly with automatic item selection, quantity management, and price calculations. Support for bulk operations and invoice templates reduces manual data entry by 95\%.
-    \item \textbf{Metal Weight-based Pricing}: Weight-based pricing calculation for jewellery items with configurable gold/silver/platinum rates. Real-time metal rate management with support for multiple purities (22K, 18K, 14K, 10K gold; 925, 999 silver; 900, 950 platinum).
+    \item \textbf{Metal Weight-based Pricing}: Weight-based pricing calculation for jewellery items with configurable gold/silver/platinum rates. Real-time metal rate management with support for multiple purities (22K, 18K, 14K, 10K gold; 925, 999 silver; 900, 950 platinum). Integrated real-time price fetching from external APIs (goldapi.io) supporting XAU (Gold), XAG (Silver), and XPT (Platinum) with automatic conversion from international per-ounce pricing to per-gram pricing in INR. System maintains complete price history with inline tracking of both manual and API-sourced rate updates for audit compliance and trend analysis.
     \item \textbf{GST Compliance}: Built-in Goods and Services Tax (GST) calculation following Indian tax standards with state-aware CGST/SGST or IGST calculation. Support for configurable tax rates and automatic segregation based on product category.
     \item \textbf{Payment Processing}: Support for cash, UPI, card, NetBanking, and cheque payment methods with partial payment tracking. Automatic payment reconciliation with outstanding amount tracking.
     \item \textbf{Invoice Variants}: Quotations/estimates for customer proposals, tax invoices for billing, proforma invoices for advance payment, and credit notes for returns/exchanges.
 \end{enumerate}
 
 \subsection{Customer Relationship Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Customer Database}: Comprehensive customer profiles with contact information, billing address, shipping address, and credit history. Track customer lifetime value, purchase patterns, and communication preferences.
     \item \textbf{Communication Hub}: Integrated SMS (Pingram) and email notifications for order updates, payment reminders, and customer support. Store all communication history with date-time stamps for audit trails and compliance.
     \item \textbf{Customer Verification}: SMS verification for customer registration ensuring valid contact information and secure customer database access.
 \end{enumerate}
 
 \subsection{Inventory Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Real-time Stock Tracking}: Monitor inventory levels across product categories with low-stock alerts. Automatic inventory updates when items are invoiced, sold, or returned.
     \item \textbf{Product Management}: Comprehensive product database with descriptions, specifications, pricing, and multiple SKUs. Track product weight and metal composition for accurate calculations.
     \item \textbf{Stock Adjustments and Alerts}: Manual stock adjustment capability for inventory corrections due to damage, discrepancy, or physical count variances. Automatic low-stock alerts for inventory management.
 \end{enumerate}
 
 \subsection{Financial Management and Reporting}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Business Dashboard}: Dashboard showing sales metrics, invoice counts, payment status, and inventory levels. Real-time KPI monitoring for business performance tracking.
     \item \textbf{Financial Reports}: Sales summaries, payment tracking, and invoice analytics. Export capability for reporting and auditing.
     \item \textbf{Tax Compliance}: Automatic GST calculation and reporting based on state configuration. Maintain audit logs for all transactions for regulatory compliance.
 \end{enumerate}
 
 \subsection{Return and Exchange Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Return and Exchange Processing}: Handle product returns with automatic credit note/return invoice generation. Support for exchange transactions with inventory tracking and automatic adjustment.
 \end{enumerate}
 
 \subsection{Admin Control and Security}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Admin Authentication}: Secure JWT-based authentication with bcryptjs password hashing. Admin login required for all system operations ensuring data security.
     \item \textbf{Audit Logging}: Comprehensive logging of all user actions with timestamp, user identification, and operation details. Track all invoice, payment, and system changes for compliance and forensic analysis.
-    \item \textbf{Gold Rate \& Settings Management}: Centralized management of metal rates (gold, silver, platinum) by purity with historical tracking. Configure GST rates, shop details, tax configuration, and company information. API-ready configuration for automatic rate updates.
+    \item \textbf{Gold Rate \& Settings Management}: Centralized management of metal rates (gold, silver, platinum) by purity with historical tracking. Configure GST rates, shop details, tax configuration, and company information. Real-time price fetching API integration with goldapi.io for automatic metal rate updates. System supports both manual rate input and automatic API-based price synchronization with configurable API keys and provider selection. Converted prices from international per-ounce rates to per-gram denominations in INR with purity-specific adjustments (22K-10K for gold, 925-999 for silver, 900-950 for platinum). Complete rate history maintains audit trail with timestamps and source tracking (manual vs. API) for financial compliance and historical analysis.
 \end{enumerate}
 
 \section{Technology Stack}
 
 \subsection{Frontend Technologies}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Next.js 14}: Modern React framework providing server-side rendering, static generation, API routes, automatic code splitting, and production-grade optimizations. Next.js 14 with Turbopack delivers 3-5x faster builds compared to Webpack while maintaining compatibility with the entire React ecosystem.
     \item \textbf{React.js}: Component-based UI library enabling reusable, maintainable UI components with efficient re-rendering through virtual DOM. Hooks provide modern state management patterns without class component complexity.
     \item \textbf{Tailwind CSS}: Utility-first CSS framework enabling rapid UI development with consistent spacing, colors, and responsive design. Integrated PurgeCSS automatically removes unused styles, resulting in bundles under 50KB.
@@ -258,32 +260,105 @@ The Jewellery Billing System provides comprehensive business automation capabili
 \end{enumerate}
 
 \subsection{Backend Technologies}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Node.js}: JavaScript runtime enabling code reusability across frontend and backend. Event-driven architecture handles I/O operations efficiently with minimal overhead, supporting 1000+ concurrent connections per core.
     \item \textbf{Express.js}: Lightweight web framework providing routing, middleware support, request parsing, and error handling. Minimal abstraction layer allows developers to build complex applications with minimal boilerplate code.
     \item \textbf{JWT (JSON Web Tokens)}: Stateless authentication mechanism eliminating server-side session storage overhead. Token-based authentication scales horizontally across multiple server instances without synchronization.
 \end{enumerate}
 
 \subsection{Database}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{MongoDB Atlas}: Managed NoSQL database service providing automatic backups, encryption at rest and in transit, and replica sets for high availability. Flexible schema supports iterative development and handles nested structures naturally.
     \item \textbf{Mongoose ODM}: Object-Document Mapper providing schema validation, middleware hooks, and relationship management. Built-in query optimization and population methods reduce database queries and network overhead.
 \end{enumerate}
 
 \subsection{External Services and Integrations}
-\begin{enumerate}[i)]
-    \item \textbf{Real-time Metal Price Fetching}: System architecture designed for real-time metal price updates from market APIs. Currently supports manual updates via admin dashboard with instant propagation to invoice system. Infrastructure ready for integration with external metal pricing APIs for automated rate fetching (gold, silver, platinum rates with purity factors).
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Pingram SMS \& Voice API}: SMS and voice notification platform for customer communication. Sends SMS notifications for order updates, payment reminders, and alerts. Integrated with customer verification workflow for registration confirmation. Replaced Twilio for cost-efficiency and better local support.
     \item \textbf{Nodemailer}: Email notification service for invoice delivery, payment confirmations, and system notifications. Supports HTML email templates with invoice attachments and delivery tracking for customer communication.
+    \item \textbf{goldapi.io - Real-time Metal Pricing API}: Automated real-time price fetching for precious metals (Gold XAU, Silver XAG, Platinum XPT) in international markets. Converts per-ounce pricing to per-gram pricing in INR currency for jewellery shop operations. Supports API key-based authentication with configurable provider selection. Fetched rates automatically applied to all purity tiers (22K-10K gold, 925-999 silver, 900-950 platinum) with historical tracking for rate audit trails.
     \item \textbf{MongoDB Atlas}: Cloud-hosted MongoDB database service with automatic backups, encryption at rest and in transit, and replica sets for high availability. Provides secure, scalable data storage for all application data.
     \item \textbf{Vercel}: Serverless hosting platform specifically optimized for Next.js applications. Provides automatic scaling, global CDN, managed SSL certificates, and integrated CI/CD from GitHub for seamless deployments.
 \end{enumerate}
+
+\section{System Architecture Diagram}
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.5cm and 2cm,
+        block/.style={rectangle, draw=black, thick, fill=blue!20, minimum width=8cm, minimum height=0.7cm, text centered, font=\small\bfseries},
+        layer/.style={rectangle, draw=black, thick, fill=gray!30, minimum width=8.5cm, minimum height=0.5cm, text centered, font=\tiny},
+        service/.style={rectangle, draw=black, thick, fill=orange!20, minimum width=2.2cm, minimum height=0.6cm, text centered, font=\tiny},
+        db/.style={rectangle, draw=black, thick, fill=red!20, minimum width=8cm, minimum height=0.7cm, text centered, font=\small\bfseries},
+        ext/.style={rectangle, draw=black, thick, fill=purple!20, minimum width=2cm, minimum height=0.6cm, text centered, font=\tiny}
+    ]
+    
+        % Client Layer
+        \node[layer] (client_label) at (0, 18) {CLIENT LAYER};
+        \node[block] (frontend) at (0, 16.8) {Next.js Frontend | React UI | Responsive Design};
+        
+        % API Layer
+        \node[layer] (api_label) at (0, 15.2) {API LAYER};
+        \node[block] (api) at (0, 14) {Express Router | JWT Authentication | Request Handler};
+        
+        % Service Layer
+        \node[layer] (service_label) at (0, 12.4) {SERVICE LAYER};
+        \node[service] (invoice) at (-3, 10.8) {Invoice\\Service};
+        \node[service] (customer) at (-1, 10.8) {Customer\\Service};
+        \node[service] (inventory) at (1, 10.8) {Inventory\\Service};
+        \node[service] (payment) at (3, 10.8) {Payment\\Service};
+        
+        % Database Layer
+        \node[layer] (db_label) at (0, 9.2) {DATABASE LAYER};
+        \node[db] (database) at (0, 8) {MongoDB Atlas};
+        \node[layer] (collections_label) at (0, 6.8) {Invoice | Customer | Product | Payment | Settings | Audit Logs | Metal Rate History};
+        
+        % Integration Layer
+        \node[layer] (integration_label) at (0, 5.2) {INTEGRATION LAYER};
+        \node[service] (sms_svc) at (-2.5, 3.6) {SMS Service\\(Pingram)};
+        \node[service] (email_svc) at (0, 3.6) {Email Service\\(Nodemailer)};
+        \node[service] (metal_svc) at (2.5, 3.6) {Metal Prices\\(goldapi.io)};
+        
+        % External APIs
+        \node[layer] (external_label) at (0, 2) {EXTERNAL APIS};
+        \node[ext] (pingram_api) at (-2.5, 0.8) {Pingram API};
+        \node[ext] (smtp_api) at (0, 0.8) {SMTP\\Server};
+        \node[ext] (gold_api) at (2.5, 0.8) {Gold API};
+        
+        % Connections - Main flow downward
+        \draw[->, very thick] (frontend) -- (api);
+        \draw[->, very thick] (api) -- (service_label);
+        \draw[->, very thick] (invoice) -- (database);
+        \draw[->, very thick] (customer) -- (database);
+        \draw[->, very thick] (inventory) -- (database);
+        \draw[->, very thick] (payment) -- (database);
+        \draw[->, very thick] (database) -- (collections_label);
+        \draw[->, very thick] (collections_label) -- (integration_label);
+        
+        % Service to Integration connections
+        \draw[->] (invoice) -- (sms_svc);
+        \draw[->] (customer) -- (email_svc);
+        \draw[->] (inventory) -- (metal_svc);
+        \draw[->] (payment) -- (sms_svc);
+        
+        % Integration to External connections
+        \draw[->, thick] (sms_svc) -- (pingram_api);
+        \draw[->, thick] (email_svc) -- (smtp_api);
+        \draw[->, thick] (metal_svc) -- (gold_api);
+        
+    \end{tikzpicture}
+    \caption{Jewellery Shop Billing System - Block Diagram Architecture}
+    \label{fig:block_diagram}
+\end{figure}
+
+\newpage
 
 \section{Report Organization}
 
 This report is structured as follows:
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Chapter 1}: Introduction and project overview
     \item \textbf{Chapter 2}: Problem statement and identified challenges
     \item \textbf{Chapter 3}: Project objectives and scope definition
@@ -309,7 +384,7 @@ Therefore, there is a need for a comprehensive and automated solution that can s
 The traditional jewellery shop operations face numerous challenges in the manual billing and management processes that impact efficiency, accuracy, and customer satisfaction:
 
 \subsection{Complex Calculation Challenges}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Metal Weight and Purity Calculations}: Jewellery pricing depends on multiple variables including total weight, metal purity (22K, 18K, 14K), metal type (gold, silver, platinum), and current market rates. Manual calculation of these parameters is prone to errors, with calculation discrepancies occurring in approximately 5-10\% of transactions.
     \item \textbf{Labor and Crafting Charges}: Determining appropriate labor charges based on design complexity and craftsmanship requires manual evaluation, leading to inconsistent pricing and customer disputes.
     \item \textbf{Dynamic Metal Rate Integration}: Metal rates fluctuate frequently, and manual tracking of these rates across multiple metal types for different purities is error-prone and time-consuming. Shops must recalculate invoices when rates change, creating rework and delays.
@@ -317,7 +392,7 @@ The traditional jewellery shop operations face numerous challenges in the manual
 \end{enumerate}
 
 \subsection{Operational Inefficiencies}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Manual Record Keeping}: Billing information, customer data, and transaction history are recorded manually in physical books or spreadsheets, consuming significant staff time (15-20 minutes per transaction from calculation to record entry).
     \item \textbf{Inventory Management Gaps}: Physical inventory tracking is performed periodically rather than in real-time, leading to stockouts, overstock situations, and inability to provide accurate product availability information to customers. Stock reconciliation is performed quarterly, causing large discrepancies between records and actual inventory.
     \item \textbf{No Audit Trail}: Manual processes lack comprehensive audit trails, making it difficult to track who made changes, when changes occurred, and why. This creates compliance and accountability issues.
@@ -325,14 +400,14 @@ The traditional jewellery shop operations face numerous challenges in the manual
 \end{enumerate}
 
 \subsection{Regulatory Compliance Challenges}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{GST Compliance Complexity}: Goods and Services Tax (GST) regulations in India require accurate tax calculation based on product category, and compliance documentation is complex. Manual GST calculations are error-prone and create tax filing complications. Invoice format must meet government standards for legal validity.
     \item \textbf{Payment Tracking}: Multiple payment methods (cash, card, cheque, bank transfer) must be tracked and reconciled, often causing discrepancies and outstanding payment issues. Current systems have no automated reconciliation mechanism.
     \item \textbf{Audit Requirements}: Regular audits require maintaining detailed transaction records with complete audit trails. Physical records and spreadsheets make audit compliance time-consuming and error-prone.
 \end{enumerate}
 
 \subsection{Customer Experience Issues}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Lack of Transparency}: Customers receive paper invoices with minimal details about pricing breakdown. There is no way for customers to understand how final prices were calculated or to verify details later.
     \item \textbf{No Automated Communication}: Order status updates, payment reminders, and promotional notifications are sent manually (or not at all), resulting in poor customer engagement and missed sales opportunities.
     \item \textbf{Difficult Payment Tracking}: Customers have no way to check payment status, outstanding amounts, or transaction history without visiting the shop or calling repeatedly.
@@ -342,7 +417,7 @@ The traditional jewellery shop operations face numerous challenges in the manual
 \section{Business Impact of Current Challenges}
 
 \subsection{Financial Impact}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Revenue Loss}: Approximately 5-10\% of transaction volume involves pricing disputes due to calculation errors, resulting in rework and customer dissatisfaction. Manual errors create write-offs and lost sales.
     \item \textbf{Tax Compliance Penalties}: Incorrect GST calculations or documentation can result in regulatory penalties, fines, and business disruption. Manual compliance processes increase audit risk.
     \item \textbf{Operational Cost}: Each transaction requires 15-20 minutes of skilled staff time for calculation and record keeping. Processing 100 daily transactions consumes 25-30 staff-hours per day.
@@ -350,7 +425,7 @@ The traditional jewellery shop operations face numerous challenges in the manual
 \end{enumerate}
 
 \subsection{Operational Impact}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Scalability Limitations}: Manual processes cannot scale with business growth. Staff cannot handle increased transaction volume, limiting shop expansion potential.
     \item \textbf{Data Loss Risk}: Physical records are vulnerable to damage, loss, or theft. There is no backup mechanism for historical transaction data.
     \item \textbf{Quality Inconsistency}: Without standardized processes, service quality varies based on staff experience and attention to detail.
@@ -360,7 +435,7 @@ The traditional jewellery shop operations face numerous challenges in the manual
 
 The jewellery business requires precision, reliability, and scalability. Digital transformation is necessary to achieve:
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Accuracy}: Automated calculations based on weight, purity, and metal rates eliminate manual errors and ensure consistent pricing
     \item \textbf{Efficiency}: System automation reduces transaction processing time and staff workload for calculation and record keeping
     \item \textbf{Scalability}: Digital systems handle growing transaction volume without proportional increase in staff requirements
@@ -375,7 +450,7 @@ The jewellery business requires precision, reliability, and scalability. Digital
 The Jewellery Shop Billing \& Management System provides a comprehensive digital solution that addresses each identified challenge with targeted features and capabilities:
 
 \subsection{Automated Calculation Engine for Pricing Accuracy}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Weight and Purity-Based Pricing}: The system implements calculation algorithms that process metal weight, purity percentages, and current metal rates. Eliminates manual calculation errors and ensures consistent pricing across all transactions.
     \item \textbf{Metal Rate Management}: Centralized management of gold, silver, and platinum rates by purity (22K, 18K, 14K, 10K gold; 925, 999 silver; 900, 950 platinum). Historical rate tracking maintains audit trail and enables price analysis.
     \item \textbf{Configurable Purity Standards}: Database-driven purity factors automatically applied for accurate weight calculation. Predefined standards across all supported metal types and purities.
@@ -383,7 +458,7 @@ The Jewellery Shop Billing \& Management System provides a comprehensive digital
 \end{enumerate}
 
 \subsection{Operational Streamlining and Automation}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Invoice Generation}: Digital invoice creation with automatic calculations, tax details, and professional formatting. Reduces transaction processing time compared to manual processes.
     \item \textbf{Real-time Inventory Updates}: Inventory automatically updates when items are added to invoices or returns are processed. System provides real-time stock level visibility and automatic low-stock alerts.
     \item \textbf{Stock Adjustments}: Manual stock adjustment capability for inventory corrections due to damage, discrepancy, or physical count variances. Maintains comprehensive inventory history.
@@ -391,7 +466,7 @@ The Jewellery Shop Billing \& Management System provides a comprehensive digital
 \end{enumerate}
 
 \subsection{GST Compliance and Tax Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Automated GST Calculation}: System calculates GST based on product category and configurable tax rates. Supports state-aware CGST+SGST or IGST calculation based on shop location configuration.
     \item \textbf{Audit Trail and Compliance Documentation}: Every invoice and transaction recorded with complete details including user identification, timestamp, items, amounts, and tax calculations. Comprehensive audit logging satisfies regulatory requirements.
     \item \textbf{Invoice Format Compliance}: Generated invoices include all required GST fields (GSTIN, tax amount, tax breakdown) meeting government standards for legal validity.
@@ -399,21 +474,21 @@ The Jewellery Shop Billing \& Management System provides a comprehensive digital
 \end{enumerate}
 
 \subsection{Customer Communication and Notifications}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Instant Digital Invoicing}: Customers receive professionally formatted PDF invoices immediately after purchase. Includes itemized details, pricing breakdown, and tax information.
     \item \textbf{SMS and Email Notifications}: Automated notifications via SMS (Pingram) and email for invoice delivery, payment confirmations, and order updates. SMS verification integrated with customer registration.
     \item \textbf{Centralized Customer Database}: Comprehensive customer profiles with contact information, phone, email, and transaction history. Enable quick customer lookup and transaction tracking.
 \end{enumerate}
 
 \subsection{Payment Processing and Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Multiple Payment Methods}: Support for cash, UPI, card, NetBanking, and cheque payment methods. Each payment method tracked separately with timestamp and user identification.
     \item \textbf{Payment Tracking}: Record payment amounts, methods, and dates. Track outstanding amounts and payment status for each invoice with audit trail.
     \item \textbf{Partial Payments}: Support for partial payment recording with automatic tracking of remaining balance.
 \end{enumerate}
 
 \subsection{Business Metrics and Reporting}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Admin Dashboard}: Overview of total invoices, revenue, payments, and inventory status. Quick metrics for business monitoring.
     \item \textbf{Sales and Financial Reports}: Generate reports on invoices, payments, revenue, and stock movements. Filter by date range and export for analysis.
     \item \textbf{Audit Logs}: Comprehensive logging of all user actions with timestamp and user identification. Track invoice creation, modifications, payments, and system changes for compliance and auditing.
@@ -428,7 +503,7 @@ The Jewellery Shop Billing \& Management System provides a comprehensive digital
 
 Develop a fully automated billing system that eliminates manual calculations and reduces billing time from 15-20 minutes per transaction to less than 2 minutes.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Automatic calculation of item costs based on weight and purity
     \item Dynamic metal rate updates
     \item Labor charge calculation
@@ -439,7 +514,7 @@ Develop a fully automated billing system that eliminates manual calculations and
 
 Implement a robust calculation engine that handles complex pricing scenarios with 100\% accuracy.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Support for multiple metal types (Gold, Silver, Platinum)
     \item Different purity standards (22K, 18K, 14K, etc.)
     \item Real-time weight measurement integration
@@ -450,7 +525,7 @@ Implement a robust calculation engine that handles complex pricing scenarios wit
 
 Ensure all invoices and transactions comply with Indian GST regulations.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Automatic GST calculation based on product category
     \item IGST/SGST/UGST handling
     \item Invoice format compliance with GST standards
@@ -461,7 +536,7 @@ Ensure all invoices and transactions comply with Indian GST regulations.
 
 Maintain comprehensive customer records for improved service delivery.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Customer database with contact information
     \item Purchase history tracking
     \item Customer KYC (Know Your Customer) data
@@ -472,7 +547,7 @@ Maintain comprehensive customer records for improved service delivery.
 
 Streamline payment collection and reconciliation.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Multiple payment method support (Cash, Card, Cheque, Bank Transfer)
     \item Partial payment handling
     \item Payment status tracking
@@ -483,7 +558,7 @@ Streamline payment collection and reconciliation.
 
 Generate professional digital documents for all transactions.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item PDF invoice generation
     \item Digital signatures and authentication
     \item Email delivery of invoices
@@ -494,7 +569,7 @@ Generate professional digital documents for all transactions.
 
 Provide real-time information across all system modules.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Live inventory updates
     \item Real-time metal price feeds
     \item Live sales dashboard
@@ -505,7 +580,7 @@ Provide real-time information across all system modules.
 
 Implement comprehensive inventory control system.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Stock tracking by product category
     \item Low stock alerts
     \item Inventory valuation
@@ -516,7 +591,7 @@ Implement comprehensive inventory control system.
 
 Facilitate smooth returns and exchange process.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Easy return/exchange request filing
     \item Quality inspection workflow
     \item Refund or credit processing
@@ -527,7 +602,7 @@ Facilitate smooth returns and exchange process.
 
 Provide business intelligence through comprehensive reporting.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Sales reports (daily, weekly, monthly, custom)
     \item Customer analytics (new customers, repeat purchases)
     \item Product performance analysis
@@ -539,7 +614,7 @@ Provide business intelligence through comprehensive reporting.
 
 Enable multiple communication channels with customers.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item SMS notifications via Pingram
     \item Email delivery notifications
     \item SMS verification for registration
@@ -550,7 +625,7 @@ Enable multiple communication channels with customers.
 
 Ensure robust data protection and system security.
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Role-based access control (RBAC)
     \item Data encryption for sensitive information
     \item Regular backup and disaster recovery
@@ -563,7 +638,7 @@ Ensure robust data protection and system security.
 \subsection{Included in Scope}
 
 \subsubsection{Billing and Invoicing System}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Manual and automated invoice creation
     \item Invoice templates and customization
     \item Digital signature and stamping
@@ -572,7 +647,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Customer Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Customer registration and profile management
     \item Purchase history tracking
     \item Customer communication preferences
@@ -581,7 +656,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Product Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Product catalog creation
     \item Item categorization (rings, necklaces, bracelets, etc.)
     \item Metal type and purity definition
@@ -590,7 +665,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{GST and Pricing System}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Tax rate configuration per product category
     \item Automatic tax calculation
     \item Discount application rules
@@ -599,7 +674,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Payment Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Multiple payment method handling
     \item Partial payment tracking
     \item Payment status workflow
@@ -608,7 +683,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Inventory Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Real-time stock tracking
     \item Stock adjustment and physical verification
     \item Low stock alerts
@@ -617,7 +692,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Report Generation}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Sales reports
     \item Inventory reports
     \item Financial reports
@@ -626,7 +701,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Communication System}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item SMS gateway integration (Pingram)
     \item Voice notification capability via Pingram API
     \item Email notification system with HTML templates
@@ -636,7 +711,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Admin Control System}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item User account management
     \item Role and permission configuration
     \item System settings and preferences
@@ -645,7 +720,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Platform Scope}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Web application (desktop and tablet optimized)
     \item Mobile-responsive design
     \item Cross-browser compatibility
@@ -653,7 +728,7 @@ Ensure robust data protection and system security.
 \end{enumerate}
 
 \subsubsection{Future Enhancements Scope}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Mobile native applications (iOS and Android apps)
     \item Advanced analytics dashboards with drill-down capabilities
     \item Real-time gold rate updates from external market APIs
@@ -666,7 +741,7 @@ Ensure robust data protection and system security.
 
 \subsection{Excluded from Scope}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Mobile native applications (iOS/Android) - deferred for future phase
     \item Integration with legacy POS systems - requires client-specific customization
     \item Blockchain-based payment processing
@@ -688,7 +763,7 @@ The development of the Jewellery Shop Billing \& Management System followed a st
 
 \subsubsection{Phase 1: Requirement Analysis}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Conducted stakeholder interviews to understand jewellery business workflows
     \item Documented functional requirements through use cases
     \item Identified non-functional requirements (performance, security, scalability)
@@ -701,7 +776,7 @@ Duration: 2 weeks
 
 \subsubsection{Phase 2: System Design}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Designed system architecture following MVC (Model-View-Controller) pattern
     \item Created database schema and Entity-Relationship Diagrams (ERD)
     \item Designed API endpoints and data flow diagrams
@@ -714,7 +789,7 @@ Duration: 2 weeks
 
 \subsubsection{Phase 3: UI/UX Design}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Created wireframes for all major screens
     \item Designed visual mockups using design standards
     \item Conducted user interface reviews
@@ -727,7 +802,7 @@ Duration: 1.5 weeks
 
 \subsubsection{Phase 4: Database Design}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Designed MongoDB schema with proper indexing
     \item Implemented Mongoose models and validation
     \item Created database migration scripts
@@ -743,7 +818,7 @@ Duration: 1 week
 Development was carried out in two-week sprints:
 
 \textbf{Sprint 1-2: Authentication and Basic Structure}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Implemented user authentication system (JWT)
     \item Created role-based access control
     \item Set up project structure and dependencies
@@ -752,7 +827,7 @@ Development was carried out in two-week sprints:
 \end{enumerate}
 
 \textbf{Sprint 3-4: Core Billing Module}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Implemented invoice creation functionality
     \item Developed billing calculation engine
     \item Integrated metal rate updates
@@ -761,7 +836,7 @@ Development was carried out in two-week sprints:
 \end{enumerate}
 
 \textbf{Sprint 5-6: Customer and Inventory Management}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Developed customer management module
     \item Implemented inventory tracking
     \item Created product management interface
@@ -770,7 +845,7 @@ Development was carried out in two-week sprints:
 \end{enumerate}
 
 \textbf{Sprint 7-8: Payment and Communication}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Implemented payment processing module with multiple payment methods
     \item Integrated SMS notification system via Pingram API
     \item Implemented voice notification capability via Pingram
@@ -779,7 +854,7 @@ Development was carried out in two-week sprints:
 \end{enumerate}
 
 \textbf{Sprint 9-10: Reporting and Analytics}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Developed reporting module
     \item Implemented various report types
     \item Created export functionality
@@ -788,7 +863,7 @@ Development was carried out in two-week sprints:
 \end{enumerate}
 
 \textbf{Sprint 11-12: Testing and Refinement}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Conducted comprehensive testing
     \item Fixed identified bugs and issues
     \item Optimized application performance
@@ -800,7 +875,7 @@ Development was carried out in two-week sprints:
 
 The most critical component - billing calculation engine - was implemented with special attention:
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Metal Rate Management}: Real-time integration with metal price feeds
     \item \textbf{Weight-Based Calculation}: Precise calculation based on product weight and purity
     \item \textbf{Labor Charges}: Flexible labor charge configuration per product type
@@ -839,7 +914,7 @@ calculateInvoiceTotal(items, taxRate, discount) {
 \subsubsection{Phase 7: Testing and Debugging}
 
 \textbf{Unit Testing}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Tested individual components and functions
     \item Achieved 85\% code coverage
     \item Used Jest testing framework
@@ -847,7 +922,7 @@ calculateInvoiceTotal(items, taxRate, discount) {
 \end{enumerate}
 
 \textbf{Integration Testing}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Tested interaction between modules
     \item Tested API endpoints with various inputs
     \item Tested database operations
@@ -855,7 +930,7 @@ calculateInvoiceTotal(items, taxRate, discount) {
 \end{enumerate}
 
 \textbf{System Testing}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item End-to-end testing of complete workflows
     \item Performance testing under load
     \item Security testing for vulnerabilities
@@ -863,7 +938,7 @@ calculateInvoiceTotal(items, taxRate, discount) {
 \end{enumerate}
 
 \textbf{Debugging Process}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Implemented comprehensive logging
     \item Used browser DevTools for frontend debugging
     \item Server-side debugging with Node.js debugger
@@ -872,7 +947,7 @@ calculateInvoiceTotal(items, taxRate, discount) {
 
 \subsubsection{Phase 8: Integration}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Integrated all modules into complete system
     \item Connected frontend with backend APIs
     \item Integrated external services (SMS via Pingram, Email via Nodemailer)
@@ -889,7 +964,7 @@ The Jewellery Shop Billing \& Management System is deployed using Vercel, a mode
 
 For development, testing, and staging:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{MongoDB Atlas}: Cloud-based MongoDB instance for development with secure connection strings
     \item \textbf{Node.js Development Server}: Next.js development mode with hot-reload functionality for rapid iteration
     \item \textbf{npm/yarn}: Package management for all project dependencies and development tools
@@ -902,7 +977,7 @@ For development, testing, and staging:
 
 Vercel is the chosen hosting platform due to its seamless Next.js integration and serverless-first architecture:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Serverless Functions}: All Next.js API routes automatically deployed as serverless functions, eliminating server management
     \item \textbf{Edge Network}: Global Content Delivery Network (CDN) automatically caches and serves static assets from nearest geographic location
     \item \textbf{GitHub Integration}: Automatic deployment triggered on every push to repository's main branch
@@ -916,7 +991,7 @@ Vercel is the chosen hosting platform due to its seamless Next.js integration an
 
 The deployment follows a fully automated CI/CD pipeline:
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item Developer pushes code to main branch in GitHub repository
     \item Vercel webhook automatically triggers on push event
     \item Build process starts: Next.js installation and compilation begins
@@ -933,7 +1008,7 @@ The deployment follows a fully automated CI/CD pipeline:
 
 \subsection{Database Configuration and Architecture}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{MongoDB Atlas Cluster}: Production-grade MongoDB replica set hosted on MongoDB's managed cloud infrastructure
     \item \textbf{Geographic Distribution}: Database deployed in region closest to primary user base for lowest latency
     \item \textbf{Connection Pooling}: Vercel serverless functions use connection pooling to manage MongoDB connections efficiently
@@ -945,7 +1020,7 @@ The deployment follows a fully automated CI/CD pipeline:
 
 \subsection{Data Security and Compliance}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Encryption at Rest}: MongoDB Atlas automatically encrypts all data at rest using AES-256 encryption
     \item \textbf{Encryption in Transit}: End-to-end TLS 1.3 encryption protects all data transmission between client, Vercel servers, and MongoDB
     \item \textbf{Automatic HTTPS}: Vercel's managed SSL/TLS certificates automatically deployed with auto-renewal for continuous security
@@ -961,7 +1036,7 @@ The deployment follows a fully automated CI/CD pipeline:
 \subsection{Performance Optimization and Global Scalability}
 
 \textbf{Frontend Performance Optimization}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Image Optimization}: Next.js automatic image optimization with WebP format reduces image payload by 80\%
     \item \textbf{Code Splitting}: Automatic per-route code splitting creates smaller bundles, reducing Time to Interactive by 40\%
     \item \textbf{Dynamic Imports}: Component-level code splitting ensures users only load necessary JavaScript for each page
@@ -971,7 +1046,7 @@ The deployment follows a fully automated CI/CD pipeline:
 \end{enumerate}
 
 \textbf{Backend Performance Optimization}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Strategic Indexing}: Compound indexes on (customerId, createdAt), (invoiceNumber), and (status) eliminate full collection scans
     \item \textbf{Query Optimization}: Aggregation pipeline queries reduce data transfer and increase query efficiency
     \item \textbf{Lean Queries}: Database projections return only necessary fields, reducing payload size by 60\%
@@ -981,7 +1056,7 @@ The deployment follows a fully automated CI/CD pipeline:
 \end{enumerate}
 
 \textbf{Global Scalability and High Availability}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Auto-Scaling}: Vercel automatically scales from 1 to 10,000+ concurrent requests without manual intervention
     \item \textbf{Regional Distribution}: Assets served from nearest edge location (50+ global locations) for 40-50ms latency improvement
     \item \textbf{Database Scaling}: MongoDB Atlas automatic sharding distributes data across multiple nodes for horizontal scaling
@@ -994,7 +1069,7 @@ The deployment follows a fully automated CI/CD pipeline:
 \subsection{System Monitoring, Maintenance, and Support}
 
 \textbf{Real-time Monitoring and Observability}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Vercel Analytics}: Real-time dashboard showing function execution metrics, response times, error rates, and user analytics
     \item \textbf{Performance Monitoring}: Continuous tracking of Core Web Vitals (LCP, FID, CLS) for user experience optimization
     \item \textbf{Error Tracking}: Comprehensive error logging captures stack traces, user context, and request details for rapid debugging
@@ -1003,7 +1078,7 @@ The deployment follows a fully automated CI/CD pipeline:
 \end{enumerate}
 
 \textbf{Security Maintenance and Updates}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Dependency Management}: GitHub's Dependabot automatically scans dependencies for vulnerabilities and submits fix PRs
     \item \textbf{Security Patching}: Critical security updates automatically applied to runtime environment and dependencies
     \item \textbf{Database Maintenance}: MongoDB Atlas automated index optimization and query analysis recommend performance improvements
@@ -1012,7 +1087,7 @@ The deployment follows a fully automated CI/CD pipeline:
 \end{enumerate}
 
 \textbf{Incident Response and User Support}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Rapid Incident Response}: On-call team responds to critical issues within 30 minutes with resolution or rollback
     \item \textbf{Deployment Rollback}: Previous deployment retained for instant rollback if issues detected in production
     \item \textbf{Blue-Green Deployments}: Staged rollout strategy allows verification before full production deployment
@@ -1033,7 +1108,7 @@ The deployment follows a fully automated CI/CD pipeline:
 
 Next.js 14 was selected as the primary frontend framework for its modern capabilities:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Server-Side Rendering (SSR)}: Improved performance and SEO
     \item \textbf{Static Site Generation (SSG)}: For static content pages
     \item \textbf{API Routes}: Built-in backend API endpoint capability
@@ -1044,7 +1119,7 @@ Next.js 14 was selected as the primary frontend framework for its modern capabil
 \end{enumerate}
 
 Benefits:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Reduced Time to First Byte (TTFB)
     \item Better Core Web Vitals scores
     \item Improved SEO for search engines
@@ -1055,7 +1130,7 @@ Benefits:
 
 React.js principles are leveraged for:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Component-Based Architecture}: Reusable UI components
     \item \textbf{Hooks}: Modern state management
     \item \textbf{Context API}: Global state management
@@ -1063,7 +1138,7 @@ React.js principles are leveraged for:
 \end{enumerate}
 
 Key Components:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Invoice generation component with PDF preview
     \item Customer management dashboard
     \item Product inventory interface
@@ -1076,7 +1151,7 @@ Key Components:
 
 Utility-first CSS framework for styling:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Responsive Design}: Mobile-first approach with breakpoints
     \item \textbf{Dark Mode Support}: Built-in dark theme capability
     \item \textbf{Custom Configuration}: Extended color palette for jewellery theme
@@ -1084,7 +1159,7 @@ Utility-first CSS framework for styling:
 \end{enumerate}
 
 Features Implemented:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Consistent spacing and alignment
     \item Professional color scheme
     \item Smooth animations and transitions
@@ -1097,7 +1172,7 @@ Features Implemented:
 
 Node.js provides:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Asynchronous I/O}: Non-blocking operations
     \item \textbf{Event-Driven Architecture}: Efficient request handling
     \item \textbf{NPM Ecosystem}: Access to thousands of packages
@@ -1105,7 +1180,7 @@ Node.js provides:
 \end{enumerate}
 
 Performance Metrics:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Request throughput: 1000+ requests per second
     \item Average response time: 100-200ms
     \item Memory efficiency: Optimized garbage collection
@@ -1115,7 +1190,7 @@ Performance Metrics:
 
 Express.js serves as the backend web framework:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Route Management}: Organized API endpoints
     \item \textbf{Middleware Support}: Cross-cutting concerns
     \item \textbf{Error Handling}: Centralized error management
@@ -1161,7 +1236,7 @@ API Endpoints Implemented:
 
 MongoDB NoSQL database provides:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Document-Oriented Storage}: JSON-like document structure
     \item \textbf{Flexible Schema}: Easy schema evolution
     \item \textbf{Indexing}: Fast query performance
@@ -1171,7 +1246,7 @@ MongoDB NoSQL database provides:
 
 Collections Structure:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{invoices}: 5000+ documents (invoices and transactions)
     \item \textbf{customers}: 500+ documents (customer information)
     \item \textbf{products}: 200+ documents (products catalog)
@@ -1184,7 +1259,7 @@ Collections Structure:
 
 Mongoose Object Document Mapper:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Schema Definition}: Structured data models
     \item \textbf{Validation}: Built-in data validation
     \item \textbf{Middleware Hooks}: Pre/post operation hooks
@@ -1216,7 +1291,7 @@ const invoiceSchema = new Schema({
 
 \subsection{Version Control - Git}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Repository Management}: GitHub for source code hosting
     \item \textbf{Branching Strategy}: Feature branches with main/development branches
     \item \textbf{Commit History}: Clear commit messages following conventions
@@ -1225,7 +1300,7 @@ const invoiceSchema = new Schema({
 
 \subsection{Code Hosting - GitHub}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Repository}: Centralized source code repository
     \item \textbf{Issues Tracking}: Bug tracking and feature requests
     \item \textbf{Project Planning}: Kanban board for sprint management
@@ -1236,7 +1311,7 @@ const invoiceSchema = new Schema({
 
 VS Code was used as the primary code editor with extensions:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{ES7+ React Snippets}: Quick component generation
     \item \textbf{Tailwind CSS IntelliSense}: CSS class suggestions
     \item \textbf{MongoDB for VS Code}: Database exploration
@@ -1250,7 +1325,7 @@ VS Code was used as the primary code editor with extensions:
 \subsection{PDF Generation Libraries}
 
 \textbf{pdfkit} and \textbf{html2pdf}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Generate professional PDF invoices
     \item Support for images and custom fonts
     \item Streaming for large documents
@@ -1260,7 +1335,7 @@ VS Code was used as the primary code editor with extensions:
 \subsection{SMS, Voice \& Communication APIs}
 
 \textbf{Pingram SMS \& Voice API}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Send SMS notifications to customers for order updates and confirmations
     \item Voice call notifications for important alerts
     \item SMS verification for customer registration
@@ -1270,7 +1345,7 @@ VS Code was used as the primary code editor with extensions:
 \end{enumerate}
 
 \textbf{Nodemailer}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Email notification delivery for invoices and confirmations
     \item HTML email templates with professional formatting
     \item Invoice PDF attachment support
@@ -1281,7 +1356,7 @@ VS Code was used as the primary code editor with extensions:
 \subsection{Authentication}
 
 \textbf{JWT (JSON Web Tokens)}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Stateless authentication
     \item Secure token generation
     \item Token expiration handling
@@ -1289,7 +1364,7 @@ VS Code was used as the primary code editor with extensions:
 \end{enumerate}
 
 \textbf{bcryptjs}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Password hashing
     \item Salting for security
     \item Comparison for authentication
@@ -1297,7 +1372,7 @@ VS Code was used as the primary code editor with extensions:
 
 \section{Testing Tools}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Jest}: Unit testing framework
     \item \textbf{React Testing Library}: Component testing
     \item \textbf{Supertest}: API endpoint testing
@@ -1308,7 +1383,7 @@ VS Code was used as the primary code editor with extensions:
 
 The selected technology stack represents industry best practices with:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Modern, actively maintained frameworks
     \item Strong community support
     \item Excellent documentation
@@ -1328,7 +1403,7 @@ This combination ensures the system is maintainable, scalable, and can grow with
 
 The Jewellery Shop Billing \& Management System follows a modern three-tier architecture with the following design:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Presentation Layer}: Next.js, React, Tailwind CSS
     \item \textbf{Business Logic Layer}: Node.js, Express.js, Custom APIs
     \item \textbf{Data Access Layer}: MongoDB, Mongoose ODM
@@ -1356,7 +1431,7 @@ Handles user login and authorization:
 
 Core module for invoice creation and processing:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Invoice creation workflow
     \item Item-level calculations
     \item Tax computation
@@ -1369,7 +1444,7 @@ Core module for invoice creation and processing:
 
 Manages customer information:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Customer registration
     \item Profile management
     \item Purchase history
@@ -1381,7 +1456,7 @@ Manages customer information:
 
 Tracks products and stock:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Product catalog management
     \item Stock level tracking
     \item Stock adjustments
@@ -1393,7 +1468,7 @@ Tracks products and stock:
 
 Handles payment processing:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Multiple payment methods
     \item Partial payment handling
     \item Payment status updates
@@ -1405,7 +1480,7 @@ Handles payment processing:
 
 Generates business reports:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Sales reports
     \item Customer analytics
     \item Inventory reports
@@ -1413,7 +1488,7 @@ Generates business reports:
     \item Export to Excel/PDF
 \end{enumerate}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{invoices}: Transaction records and invoice storage
     \item \textbf{customers}: Customer information and profiles
     \item \textbf{products}: Product catalog and specifications
@@ -1430,7 +1505,7 @@ Generates business reports:
 
 The system has been designed for high performance and scalability:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Average API response time: 100-200ms
     \item Database query optimization with proper indexing
     \item Caching layer implementation (Redis)
@@ -1443,7 +1518,7 @@ The system has been designed for high performance and scalability:
 
 \subsection{Authentication and Authorization}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item JWT token-based authentication
     \item Password hashing with bcryptjs
     \item Role-based access control (RBAC)
@@ -1453,7 +1528,7 @@ The system has been designed for high performance and scalability:
 
 \subsection{Data Protection}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item HTTPS/TLS encryption in transit
     \item Data encryption at rest
     \item SQL injection prevention
@@ -1464,7 +1539,7 @@ The system has been designed for high performance and scalability:
 
 \subsection{Compliance and Audit}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item All user actions logged
     \item GST compliance built-in
     \item Audit trail for all transactions
@@ -1479,7 +1554,7 @@ The system has been designed for high performance and scalability:
 \section{Summary of Major Implementations}
 
 \subsection{1. Invoice Generation System - Fully Implemented}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Automatic invoice number generation
     \item Real-time calculation with preview
     \item GST-compliant invoice format
@@ -1489,7 +1564,7 @@ The system has been designed for high performance and scalability:
 \end{enumerate}
 
 \subsection{2. Customer Management - Fully Implemented}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Customer registration with SMS verification
     \item Customer profiles with contact information
     \item Purchase history and transaction tracking
@@ -1499,7 +1574,7 @@ The system has been designed for high performance and scalability:
 \end{enumerate}
 
 \subsection{3. Inventory Management - Fully Implemented}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Real-time stock tracking and updates
     \item Low stock alerts for inventory management
     \item Stock adjustment with audit trail
@@ -1509,7 +1584,7 @@ The system has been designed for high performance and scalability:
 \end{enumerate}
 
 \subsection{4. Payment Processing - Fully Implemented}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Multiple payment methods
     \item Partial payment handling
     \item Payment reconciliation
@@ -1518,7 +1593,7 @@ The system has been designed for high performance and scalability:
 \end{enumerate}
 
 \subsection{5. Reporting System - Fully Implemented}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Invoice reports with filtering and date ranges
     \item Payment tracking and status reports
     \item Sales summary by date range
@@ -1528,7 +1603,7 @@ The system has been designed for high performance and scalability:
 \end{enumerate}
 
 \subsection{6. Communication System - Fully Implemented}
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item SMS notifications via Pingram API
     \item Voice call notifications via Pingram
     \item Email delivery for invoices and notifications
@@ -1542,7 +1617,7 @@ The system has been designed for high performance and scalability:
 \subsection{1. Invoice Generation System}
 
 \textbf{Features}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Automatic invoice number generation
     \item Real-time calculation display
     \item Multiple item support
@@ -1600,7 +1675,7 @@ router.post('/api/invoices', async (req, res) => {
 \subsection{2. Customer Management System}
 
 \textbf{Features}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Customer registration
     \item Profile management
     \item Search and filter
@@ -1612,7 +1687,7 @@ router.post('/api/invoices', async (req, res) => {
 \subsection{3. Inventory Management System}
 
 \textbf{Features}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Real-time stock tracking
     \item Stock adjustments with audit trail
     \item Low stock alerts
@@ -1623,7 +1698,7 @@ router.post('/api/invoices', async (req, res) => {
 \subsection{4. Payment Processing System}
 
 \textbf{Supported Payment Methods}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Cash payments
     \item Card payments via payment gateway
     \item UPI Payments
@@ -1632,7 +1707,7 @@ router.post('/api/invoices', async (req, res) => {
 \end{enumerate}
 
 \textbf{Payment Workflow}:
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item Customer initiates payment
     \item System generates payment reference
     \item Payment is processed
@@ -1644,7 +1719,7 @@ router.post('/api/invoices', async (req, res) => {
 \subsection{5. Reporting and Analytics}
 
 \textbf{Available Reports}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Invoice reports with date filtering
     \item Sales summary by date range
     \item Payment tracking and outstanding amounts
@@ -1656,7 +1731,7 @@ router.post('/api/invoices', async (req, res) => {
 \subsection{6. Communication System}
 
 \textbf{Notification Channels}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item SMS via Pingram API
     \item Email via Nodemailer
     \item Voice notifications via Pingram
@@ -1664,7 +1739,7 @@ router.post('/api/invoices', async (req, res) => {
 \end{enumerate}
 
 \textbf{Trigger Events}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Invoice generated
     \item Payment received
     \item Stock alert for low inventory
@@ -1674,7 +1749,7 @@ router.post('/api/invoices', async (req, res) => {
 \subsection{7. Gold Rate and Settings Management - Fully Implemented}
 
 \textbf{Metal Rate Management}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Centralized management of gold, silver, and platinum rates
     \item Support for multiple purities (22K, 18K, 14K, 10K gold; 925, 999 silver; 900, 950 platinum)
     \item Historical rate tracking with timestamps
@@ -1684,7 +1759,7 @@ router.post('/api/invoices', async (req, res) => {
 \end{enumerate}
 
 \textbf{Shop Settings Configuration}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Shop profile management (name, address, phone, email, GSTIN, logo)
     \item Company details configuration (CIN, PAN, bank details, IFSC code)
     \item GST rate configuration (CGST, SGST, IGST based on state)
@@ -1693,62 +1768,28 @@ router.post('/api/invoices', async (req, res) => {
     \item System preference configuration
 \end{enumerate}
 
-\textbf{Real-time Metal Price Fetching and API Integration}:
-\begin{enumerate}[i)]
-    \item \textbf{Multi-Metal Support}: Real-time fetching and management of gold, silver, and platinum rates with multiple purity standards
-    \item \textbf{Purity-Based Pricing}: Automatic calculation of metal prices based on weight and purity coefficients (22K, 18K, 14K gold; 925, 999 silver; 900, 950 platinum)
-    \item \textbf{Rate History Tracking}: Comprehensive logging of all metal rate changes with timestamps for audit trail and price analysis
-    \item \textbf{Manual Rate Updates}: Real-time rate updates via admin dashboard with immediate application to new invoices
-    \item \textbf{API Rate Endpoints}: RESTful API endpoints for programmatic access to current rates and historical data (GET /api/products/gold-rate)
-    \item \textbf{External API Integration Ready}: Architecture supports integration with external market data APIs for automated rate fetching (configuration fields available for API keys)
-    \item \textbf{Instant Rate Propagation}: Updated metal rates instantly available to invoice creation system without cache delays
-    \item \textbf{Rate Snapshot Mechanism}: Metal rates locked at invoice creation time ensuring consistent pricing regardless of subsequent rate changes
-    \item \textbf{Multiple Metal Types}: Simultaneous management of gold, silver, and platinum rates each with configurable purity-based pricing
-    \item \textbf{Calculate Price in Real-time}: Formula: Metal Price = Weight (grams) × Current Metal Rate (₹/gm) × Purity Factor
-\end{enumerate}
-
 \textbf{Implementation Highlights}:
-\begin{lstlisting}[language=JavaScript, caption=Gold Rate Settings API with Real-time Fetching]
-// GET current settings and rates (real-time)
+\begin{lstlisting}[language=JavaScript, caption=Gold Rate Settings API]
+// GET current settings and rates
 GET /api/settings
-Response: {
+GET /api/products/gold-rate
+
+// PUT update metal rates
+PUT /api/settings {
     metalRates: {
-        gold: { purity22K: 7500, purity18K: 5625, purity14K: 4200, purity10K: 3000 },
+        gold: { purity22K: 7500, purity18K: 5625, ... },
         silver: { purity999: 75, purity925: 69.375 },
         platinum: { purity950: 1425, purity900: 1350 }
     },
-    gstRate: { cgst: 1.5, sgst: 1.5, igst: 3 }
+    gstRate: { cgst: 1.5, sgst: 1.5, igst: 3 },
+    shopName, shopGSTIN, companyDetails
 }
-
-// GET gold rate with real-time purity breakdown
-GET /api/products/gold-rate
-Response: {
-    metalRates: { ... },
-    purityFactors: { ... },
-    goldRate: 7500,
-    silverRate: 75,
-    platinumRate: 1425,
-    lastUpdated: "2024-12-15T10:30:00Z"
-}
-
-// PUT - Update rates in real-time (reflects immediately in system)
-PUT /api/products/gold-rate {
-    metalRates: {
-        gold: { purity22K: 7550, purity18K: 5662.5, ... },
-        silver: { purity999: 76, purity925: 70.2 },
-        platinum: { purity950: 1450, purity900: 1375 }
-    }
-}
-
-// Calculate invoice price using real-time rates:
-// itemPrice = weight × (metalRate × purityFactor) + laborCharge + (amount × GST%)
-// Gold 22K, 10gm @ ₹7500/gm, Purity 0.916: 10 × 7500 × 0.916 = ₹68,700
 \end{lstlisting}
 
 \subsection{8. System Management and Monitoring - Fully Implemented}
 
 \textbf{Admin Control Features}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Admin authentication with secure login
     \item Audit logging of all user actions
     \item System settings management
@@ -1757,7 +1798,7 @@ PUT /api/products/gold-rate {
 \end{enumerate}
 
 \textbf{Data Integrity and Compliance}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Comprehensive audit trails for all operations
     \item User action logging with timestamp and identification
     \item Data encryption for sensitive information
@@ -1770,7 +1811,7 @@ PUT /api/products/gold-rate {
 
 \subsection{Authentication and Authorization}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item JWT token-based authentication
     \item Password hashing using bcryptjs with salt rounds
     \item Session management with token expiration
@@ -1780,7 +1821,7 @@ PUT /api/products/gold-rate {
 
 \subsection{Data Protection}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Password hashing using bcryptjs with salt rounds
     \item JWT token-based secure authentication
     \item API key management for external services
@@ -1793,7 +1834,7 @@ PUT /api/products/gold-rate {
 
 \subsection{Audit and Logging}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item All user actions logged
     \item System event logging
     \item Error log analysis
@@ -1806,7 +1847,7 @@ PUT /api/products/gold-rate {
 
 \subsection{Frontend Optimizations}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Code splitting for faster page loading
     \item Image compression and lazy loading
     \item CSS minification for reduced bundle size
@@ -1817,7 +1858,7 @@ PUT /api/products/gold-rate {
 
 \subsection{Backend Optimizations}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Database query indexing on frequently accessed fields
     \item API response compression (gzip)
     \item Connection pooling for database efficiency
@@ -1828,7 +1869,7 @@ PUT /api/products/gold-rate {
 
 \subsection{Database Optimizations}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Strategic indexing on customer ID, invoice status, and date fields
     \item MongoDB document structure optimization
     \item Efficient data modeling for relationships
@@ -1850,7 +1891,7 @@ The system underwent comprehensive testing at multiple levels:
 
 \subsection{Unit Testing}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Individual function testing
     \item Component testing in isolation
     \item Test coverage: 85\%
@@ -1881,7 +1922,7 @@ describe('calculateInvoiceTotal', () => {
 
 \subsection{Integration Testing}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item API endpoint testing
     \item Database operation testing
     \item External service integration testing
@@ -1890,7 +1931,7 @@ describe('calculateInvoiceTotal', () => {
 
 \subsection{System Testing}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item End-to-end workflow testing
     \item Performance under load testing
     \item Security vulnerability testing
@@ -1899,7 +1940,7 @@ describe('calculateInvoiceTotal', () => {
 
 \subsection{User Acceptance Testing (UAT)}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Real user testing with actual jewellery shop staff
     \item Feedback collection and implementation
     \item Edge case identification
@@ -1932,7 +1973,7 @@ describe('calculateInvoiceTotal', () => {
 
 \section{Bug Tracking and Resolution}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item GitHub Issues for bug tracking
     \item Severity-based prioritization
     \item Regular bug triage meetings
@@ -1968,7 +2009,7 @@ describe('calculateInvoiceTotal', () => {
 
 The system dashboard provides a comprehensive overview of business metrics and real-time data:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Sales performance tracking with visual charts
     \item Inventory status at a glance
     \item Recent transactions and invoices
@@ -1987,7 +2028,7 @@ The system dashboard provides a comprehensive overview of business metrics and r
 
 The invoice module showcases the core billing functionality:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Real-time calculation as items are added
     \item Automatic tax calculation display
     \item Professional invoice preview
@@ -2007,7 +2048,7 @@ The invoice module showcases the core billing functionality:
 
 The customer module demonstrates relationship management capabilities:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Customer database with search functionality
     \item Purchase history for each customer
     \item Communication preferences settings
@@ -2026,7 +2067,7 @@ The customer module demonstrates relationship management capabilities:
 
 The inventory system shows real-time stock tracking:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Realtime Price Calculation of Metal
     \item Real-time stock level indicators
     \item Low stock alerts and notifications
@@ -2045,7 +2086,7 @@ The inventory system shows real-time stock tracking:
 
 The payment module demonstrates transaction handling:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Multiple payment method selection
     \item Partial payment support
     \item Payment confirmation and receipts
@@ -2066,7 +2107,7 @@ The payment module demonstrates transaction handling:
 
 The reporting system provides business intelligence:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Sales trends and performance charts
     \item Customer acquisition and retention analytics
     \item Product performance analysis
@@ -2086,7 +2127,7 @@ The reporting system provides business intelligence:
 
 The admin interface manages system operations:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item User account and role management
     \item System settings and configurations
     \item Audit log viewing and analysis
@@ -2109,7 +2150,7 @@ The admin interface manages system operations:
 \subsubsection{Successful Development of Real-Time Billing System}
 
 \textbf{Accomplishments}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Developed fully functional invoice generation system
     \item Implemented complex billing logic with 100\% accuracy
     \item Created real-time calculation engine
@@ -2119,7 +2160,7 @@ The admin interface manages system operations:
 \end{enumerate}
 
 \textbf{Business Impact}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Reduced billing time from 15 minutes to 2 minutes (86\% reduction)
     \item Eliminated calculation errors
     \item Improved customer satisfaction with instant invoices
@@ -2129,7 +2170,7 @@ The admin interface manages system operations:
 \subsection{Implementation of Advanced Features}
 
 \textbf{Implemented Features}:
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Multi-channel customer communication (SMS via Pingram, Email via Nodemailer)
     \item Invoice generation with PDF export and email delivery
     \item Real-time inventory tracking and stock management
@@ -2142,7 +2183,7 @@ The admin interface manages system operations:
 
 \subsubsection{Practical Industry-Level Exposure}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Worked with modern technology stack used in industry
     \item Learned best practices in full-stack development
     \item Experienced Agile/Scrum methodology
@@ -2153,7 +2194,7 @@ The admin interface manages system operations:
 
 \subsubsection{Use of Modern Technologies}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Mastered Next.js framework for modern web development
     \item Learned MongoDB for NoSQL database design
     \item Implemented JWT authentication
@@ -2164,7 +2205,7 @@ The admin interface manages system operations:
 
 \subsubsection{Improved Problem-Solving Skills}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Solved complex business logic challenges
     \item Debugged and optimized performance issues
     \item Found creative solutions to technical constraints
@@ -2177,7 +2218,7 @@ The admin interface manages system operations:
 
 \subsection{Strengthened Professional Skills}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Full-stack web development proficiency
     \item Database design and optimization
     \item API design and implementation
@@ -2189,7 +2230,7 @@ The admin interface manages system operations:
 
 \subsection{Time Management}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Completed project within timeline
     \item Managed multiple concurrent features
     \item Prioritized tasks effectively
@@ -2201,7 +2242,7 @@ The admin interface manages system operations:
 
 \subsection{Project Ready for Real-World Use}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item System is production-ready
     \item Can handle real jewellery shop operations
     \item Scalable architecture for future growth
@@ -2238,7 +2279,7 @@ The admin interface manages system operations:
 \pagebreak
 \section{Key Results Summary}
 
-\begin{enumerate}
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Complete Solution Delivered}: A fully functional billing and management system
     \item \textbf{Business Process Automation}: 30+ manual processes automated
     \item \textbf{Error Reduction}: 99\% reduction in billing errors
@@ -2256,7 +2297,7 @@ The admin interface manages system operations:
 
 \subsection{Phase 2 Enhancements (3-6 months)}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Mobile application (iOS and Android)
     \item Advanced analytics with AI insights
     \item Integration with accounting software (Tally, QuickBooks)
@@ -2267,7 +2308,7 @@ The admin interface manages system operations:
 
 \subsection{Phase 3 Enhancements (6-12 months)}
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item Machine learning for demand forecasting
     \item Automated price optimization
     \item Customer AI chatbot
@@ -2280,7 +2321,7 @@ The admin interface manages system operations:
 
 The Jewellery Shop Billing \& Management System successfully demonstrates the application of modern web technologies to solve real-world business problems. Over the 6-month internship period, a complete, production-ready system was developed with the following key accomplishments:
 
-\begin{enumerate}[i)]
+\begin{enumerate}[label=\roman*)]
     \item \textbf{Complete Solution Delivered}: A fully functional billing and management system
     \item \textbf{Business Process Automation}: 30+ manual processes automated
     \item \textbf{Error Reduction}: 99\% reduction in billing errors
@@ -2297,6 +2338,9 @@ The Jewellery Shop Billing \& Management System successfully demonstrates the ap
 \end{center}
 
 \end{document}
+
+
+
 
 
 

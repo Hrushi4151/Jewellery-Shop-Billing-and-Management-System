@@ -12,12 +12,13 @@ export default function DashboardPage() {
     const token = localStorage.getItem('token');
     if (!token) {
       router.push('/login');
+      return;
     }
   }, [router]);
 
   return (
     <>
-      <Header user={JSON.parse(localStorage.getItem('user') || '{}')} />
+      <Header />
       <Dashboard />
     </>
   );
