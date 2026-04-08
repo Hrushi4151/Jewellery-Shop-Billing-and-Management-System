@@ -1,0 +1,312 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #f5f6f8;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.refreshInfo {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.refreshInfo span {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.toggleLabel input {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.message {
+  padding: 1rem;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  margin-bottom: -2px;
+}
+
+.tab:hover {
+  color: #d4af37;
+}
+
+.tab.active {
+  color: #d4af37;
+  border-bottom-color: #d4af37;
+}
+
+.content {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 0.75rem;
+}
+
+.card h4 {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.stat span {
+  color: #666;
+}
+
+.stat strong {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+}
+
+.healthMetrics {
+  margin: 1.5rem 0;
+}
+
+.metric {
+  margin-bottom: 1.5rem;
+}
+
+.metric strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.progressBar {
+  height: 24px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.progress {
+  height: 100%;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.infoBox {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid #d4af37;
+}
+
+.infoBox h4 {
+  margin-top: 0;
+}
+
+.infoBox p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.backupList {
+  margin-top: 2rem;
+}
+
+.backupList h4 {
+  margin-top: 0;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.backupRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  border-left: 4px solid #d4af37;
+}
+
+.backupRow strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.backupRow p {
+  margin: 0.25rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.templateList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.templateItem {
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  border-left: 4px solid #d4af37;
+}
+
+.templateItem strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.templateItem p {
+  margin: 0.25rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .topBar {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .refreshInfo {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .backupRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

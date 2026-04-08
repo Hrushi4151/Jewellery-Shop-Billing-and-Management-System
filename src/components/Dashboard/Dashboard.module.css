@@ -1,0 +1,268 @@
+.dashboard {
+  padding: 1.2rem;
+  background: var(--bg-secondary);
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+.header button {
+  padding: 7px 12px;
+  font-size: 0.78rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.statCard {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.9rem;
+  display: flex;
+  gap: 0.7rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.statCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.statIcon {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statContent {
+  flex: 1;
+}
+
+.statContent h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ratesSection {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.95rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.ratesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.ratesHeader h2 {
+  margin: 0;
+  font-size: 0.98rem;
+}
+
+.ratesUpdatedAt {
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+.metalCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.7rem;
+  margin-bottom: 0.95rem;
+}
+
+.metalCard {
+  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.metalName {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.metalRate {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metalHint {
+  margin: 0.25rem 0 0;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.graphSection {
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.7rem;
+}
+
+.graphSection h3 {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+}
+
+.graphLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.74rem;
+}
+
+.legendDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+}
+
+.lineChartWrap {
+  width: 100%;
+  height: 230px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  padding: 0.35rem;
+}
+
+.lineChart {
+  width: 100%;
+  height: 100%;
+}
+
+.gridLine {
+  stroke: #e5e7eb;
+  stroke-width: 1;
+}
+
+.graphDates {
+  position: relative;
+  height: 1.25rem;
+  margin-top: 0.4rem;
+  border-top: 1px dashed #d1d5db;
+}
+
+.graphDateLabel {
+  position: absolute;
+  top: 0.25rem;
+  transform: translateX(-50%);
+  font-size: 0.67rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.latestRatesRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.7rem;
+}
+
+.latestRateCard {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.55rem;
+  background: #fff;
+}
+
+.latestRateCard p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.latestRateCard strong {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+}
+
+.emptyRates {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 0.8rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ratesHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lineChartWrap {
+    height: 210px;
+  }
+
+  .graphDateLabel {
+    font-size: 0.62rem;
+  }
+
+  .latestRatesRow {
+    grid-template-columns: 1fr;
+  }
+}

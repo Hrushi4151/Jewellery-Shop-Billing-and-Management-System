@@ -1,0 +1,405 @@
+.container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.error {
+  background-color: #ffebee;
+  border-left: 4px solid #d32f2f;
+  color: #d32f2f;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.success {
+  background-color: #e8f5e9;
+  border-left: 4px solid #4caf50;
+  color: #2e7d32;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+
+.invoicesList {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+  height: fit-content;
+}
+
+.invoicesList h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 10px;
+}
+
+.list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.invoiceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.invoiceItem:hover {
+  border-color: #d32f2f;
+  background-color: #ffebee;
+}
+
+.invoiceItem.selected {
+  background-color: #ffebee;
+  border-color: #d32f2f;
+  border-width: 2px;
+}
+
+.invoiceInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.invoiceInfo strong {
+  color: #333;
+  font-size: 14px;
+}
+
+.date {
+  color: #999;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.amount {
+  font-weight: bold;
+  color: #d32f2f;
+  margin-left: 8px;
+}
+
+.noData {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.detailsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.invoiceDetails {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background: white;
+}
+
+.invoiceDetails h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 16px;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 10px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.detail span {
+  color: #666;
+}
+
+.detail strong {
+  color: #333;
+}
+
+.returnsHistory {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.returnsHistory h4 {
+  margin-top: 0;
+  color: #d32f2f;
+  font-size: 14px;
+}
+
+.returnItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.returnItemInfo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.refNo {
+  font-weight: 500;
+  color: #333;
+}
+
+.returnType {
+  background-color: #d32f2f;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.returnItemAmount {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+.returnForm {
+  border: 1px solid #d32f2f;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff5f5;
+}
+
+.returnForm h3 {
+  margin-top: 0;
+  color: #d32f2f;
+  font-size: 16px;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 16px;
+}
+
+.radioGroup label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.radioGroup input[type='radio'] {
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.formGroup textarea,
+.formGroup select,
+.disabledInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.formGroup select {
+  background-color: white;
+  cursor: pointer;
+}
+
+.disabledInput {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+  cursor: not-allowed;
+}
+
+.itemsCheckbox {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.checkboxItem:last-child {
+  border-bottom: none;
+}
+
+.checkboxItem input[type='checkbox'] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.checkboxItem label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.itemName {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.itemDetails {
+  color: #666;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.info {
+  background-color: #e3f2fd;
+  border-left: 3px solid #2196f3;
+  padding: 10px;
+  border-radius: 4px;
+  color: #1565c0;
+  font-size: 13px;
+}
+
+.formActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.submitBtn,
+.cancelBtn,
+.createBtn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitBtn {
+  background-color: #d32f2f;
+  color: white;
+  flex: 2;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #b71c1c;
+}
+
+.cancelBtn {
+  background-color: #999;
+  color: white;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background-color: #777;
+}
+
+.createBtn {
+  background-color: #d32f2f;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  margin-top: 0;
+}
+
+.createBtn:hover {
+  background-color: #b71c1c;
+}
+
+.submitBtn:disabled,
+.cancelBtn:disabled,
+.createBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .detailsSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .invoicesList {
+    max-height: 300px;
+  }
+}
